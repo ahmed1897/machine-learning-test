@@ -11,7 +11,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
 # Reading the dataset
-dataset = pd.read_csv('D:\\OneDrive\\Desktop\\Same7\\test.csv', sep=None, engine='python')
+dataset = pd.read_csv('D:\\OneDrive\\Desktop\\Same7\\data.csv', sep=None, engine='python')
 
 # Count the number of missing values for each column
 num_missing = (dataset[:] == 0).sum()
