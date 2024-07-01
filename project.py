@@ -11,7 +11,17 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
 # Reading the dataset
-dataset = pd.read_csv('D:\\OneDrive\\Desktop\\Same7\\data.csv', sep=None, engine='python')
+# dataset = pd.read_csv('D:\\OneDrive\\Desktop\\Same7\\data.csv', sep=None, engine='python')
+import os
+
+# Get the path of the current script
+current_script_path = os.path.abspath(__file__)
+
+# Get the directory containing the script
+script_dir = os.path.dirname(current_script_path)
+
+# Example: Get the path of a file in the same directory (replace 'data.csv' with your filename)
+dataset = pd.read_csv(os.path.join(script_dir, 'test.csv'))
 
 # Count the number of missing values for each column
 num_missing = (dataset[:] == 0).sum()
